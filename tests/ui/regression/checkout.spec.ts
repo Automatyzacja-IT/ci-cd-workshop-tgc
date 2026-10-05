@@ -42,7 +42,7 @@ test.describe('Checkout', () => {
     await startCheckout(product, checkout);
     await checkout.placeOrder.click();
 
-    await expect(checkout.field('email')).toHaveAttribute('aria-invalid', 'false');
+    await expect(checkout.field('email')).toHaveAttribute('aria-invalid', 'true');
   });
 
   test('clears the error once the field is corrected and resubmitted', async ({
